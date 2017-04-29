@@ -1,0 +1,19 @@
+{
+  "name": "fetch-queue-srcs",
+  "private": true,
+  "homepage": "https://github.com/evan-liu/fetch-queue",
+  "bugs": {
+    "url": "https://github.com/evan-liu/fetch-queue/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evan-liu/fetch-queue.git"
+  },
+  "scripts": {
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^2.3.2"
+  }
+}
