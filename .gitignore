@@ -1,0 +1,18 @@
+# Build & Deploy
+/dist/
+coverage/
+
+# Dependencies & Packages
+node_modules/
+
+# Editor & IDE
+.idea/
+*.sublime-project
+*.sublime-workspace
+.settings
+.vscode
+
+# Misc
+npm-debug.log
+yarn-error.log
+.DS_STORE
