@@ -11,6 +11,8 @@
     "url": "git+https://github.com/evan-liu/fetch-queue.git"
   },
   "scripts": {
+    "build:core": "rm -rf dist; cd packages/core; tsc",
+    "test:core": "cd packages/core; jest src --config=jest.json --watchAll"
   },
   "dependencies": {},
   "devDependencies": {
