@@ -13,12 +13,14 @@
   "scripts": {
     "build:core": "rm -rf dist; cd packages/core; tsc",
     "test:core": "cd packages/core; jest src --config=jest.json --watchAll",
-    "test:core:coverage": "cd packages/core; jest src --config=jest.json --coverage"
+    "test:core:ci": "cd packages/core; jest src --config=jest.json --coverage",
+    "posttest:core:ci": "codecov -f dist/coverage/core/remapped/coverage.json"
   },
   "dependencies": {},
   "devDependencies": {
     "@types/fetch-mock": "^5.8.2",
     "@types/jest": "^19.2.2",
+    "codecov": "^2.1.0",
     "fetch-mock": "^5.10.0",
     "jest": "^19.0.2",
     "ts-jest": "^19.0.14",

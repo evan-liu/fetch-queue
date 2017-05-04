@@ -3,10 +3,7 @@ language: node_js
 node_js:
   - "7"
 
-cache:
-  yarn: true
-  directories:
-    - "node_modules"
+cache: yarn
 
 script:
-  - yarn run test:core:coverage
+  - yarn run test:core:ci
