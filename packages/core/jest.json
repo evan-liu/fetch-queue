@@ -1,8 +1,10 @@
 {
+  "testRegex": "\\.spec\\.ts$",
+  "coverageDirectory": "../../dist/coverage/core",
   "transform": {
     ".ts": "../../node_modules/ts-jest/preprocessor.js"
   },
-  "testRegex": "\\.spec\\.ts$",
+  "testResultsProcessor": "../../node_modules/ts-jest/coverageprocessor.js",
   "moduleFileExtensions": [
     "ts",
     "js",

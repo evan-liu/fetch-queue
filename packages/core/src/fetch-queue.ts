@@ -98,6 +98,7 @@ export class FetchQueue {
         // It is sending out. Cannot really cancel the request. Just ignore the response.
         break;
       default:
+        // Do noting if it is already finished/canceled
         return;
     }
     item.state = ItemState.Canceled;
