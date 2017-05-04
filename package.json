@@ -16,7 +16,9 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@types/fetch-mock": "^5.8.2",
     "@types/jest": "^19.2.2",
+    "fetch-mock": "^5.10.0",
     "jest": "^19.0.2",
     "ts-jest": "^19.0.14",
     "tslint": "^5.1.0",
