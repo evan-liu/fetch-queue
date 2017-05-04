@@ -12,7 +12,8 @@
   },
   "scripts": {
     "build:core": "rm -rf dist; cd packages/core; tsc",
-    "test:core": "cd packages/core; jest src --config=jest.json --watchAll"
+    "test:core": "cd packages/core; jest src --config=jest.json --watchAll",
+    "test:core:coverage": "cd packages/core; jest src --config=jest.json --coverage"
   },
   "dependencies": {},
   "devDependencies": {
