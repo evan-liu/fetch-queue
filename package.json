@@ -11,7 +11,7 @@
     "url": "git+https://github.com/evan-liu/fetch-queue.git"
   },
   "scripts": {
-    "build:core": "rm -rf dist; cd packages/core; tsc",
+    "build:core": "rm -rf dist; cd packages/core; tsc; tsc -p tsconfig.es5.json; cp package.json ../../dist/packages/core",
     "test:core": "cd packages/core; jest src --config=jest.json --watchAll",
     "test:core:ci": "cd packages/core; jest src --config=jest.json --coverage",
     "posttest:core:ci": "codecov -f dist/coverage/core/remapped/coverage.json"

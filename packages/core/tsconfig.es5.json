@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "es5",
+      "es2015.promise",
+      "dom"
+    ],
+    "outDir": "../../dist/packages/core/es5",
+    "strict": true,
+    "sourceMap": true,
+    "inlineSources": true
+  },
+  "files": [
+    "src/fetch-queue.ts"
+  ]
+}

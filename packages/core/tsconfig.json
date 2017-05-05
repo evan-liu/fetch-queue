@@ -4,9 +4,6 @@
     "module": "es2015",
     "moduleResolution": "node",
     "outDir": "../../dist/packages/core",
-    "typeRoots": [
-      "../../node_modules/@types"
-    ],
     "strict": true,
     "declaration": true,
     "sourceMap": true,
