@@ -37,7 +37,6 @@ interface IQueueItem {
  * Request queue base on fetch() API.
  */
 export class FetchQueue {
-
   /** Fetch queue options. */
   public readonly options: IFetchQueueOptions;
 
@@ -53,6 +52,7 @@ export class FetchQueue {
 
   private pendingItems: IQueueItem[] = [];
   private activeItems: IQueueItem[] = [];
+  private isPaused = false;
 
   /**
    * Create a fetch queue.
@@ -89,6 +89,17 @@ export class FetchQueue {
     return promise;
   }
 
+  /** Pause the pending list. */
+  public pause() {
+    this.isPaused = true;
+  }
+
+  /** Resume the pending list. */
+  public resume() {
+    this.isPaused = false;
+    this.checkNext();
+  }
+
   private cancel(item: IQueueItem) {
     switch (item.state) {
       case ItemState.Pending:
@@ -106,7 +117,7 @@ export class FetchQueue {
   }
 
   private checkNext() {
-    while (this.pendingCount > 0 && this.activeCount < this.options.maxConnections!) {
+    while (!this.isPaused && this.pendingCount > 0 && this.activeCount < this.options.maxConnections!) {
       const item = this.pendingItems.shift()!;
       this.activeItems.push(item);
       item.state = ItemState.Active;

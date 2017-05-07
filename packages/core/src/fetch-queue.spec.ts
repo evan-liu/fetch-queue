@@ -82,3 +82,24 @@ test("cancel requests", (done) => {
     done();
   });
 });
+
+test("pause and resume", (done) => {
+  const q1 = new FetchQueue();
+  const q2 = new FetchQueue();
+
+  q1.pause();
+  q2.pause();
+
+  const p1 = q1.add("test/1");
+  const p2 = q2.add("test/2");
+
+  const onP1Success = jest.fn();
+  p1.then(onP1Success);
+
+  q2.resume();
+
+  p2.then(() => {
+    expect(onP1Success).not.toHaveBeenCalled();
+    done();
+  });
+});
